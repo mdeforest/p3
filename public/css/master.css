@@ -1,0 +1,264 @@
+fieldset {
+    border: none;
+    margin: 0 auto;
+    width: 46%;
+    text-align: center;
+    float: left;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+label {
+    display: block;
+    float: left;
+    text-align: left !important;
+    font-family: 'Slabo 27px', serif;
+}
+
+section {
+    height: 99vh;
+    padding-top: 5vh;
+    text-align: center;
+}
+
+select {
+    height: 43px;
+    border-radius: 0;
+}
+
+span.error {
+    float: left;
+}
+
+span.error, span.info {
+    font-family: 'Slabo 27px', serif;
+    color: #cc0033;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+span.info {
+    float: right;
+}
+
+textarea {
+    outline: none;
+    resize: none;
+    border: 3px solid #ccc;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 59vh;
+}
+
+.arrow-down {
+    box-sizing: border-box;
+    height: 6vw;
+    width: 6vw;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: #465D89;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+}
+
+.arrow-up {
+    box-sizing: border-box;
+    height: 6vw;
+    width: 6vw;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: #465D89;
+    border-width: 0 3px 3px 0;
+    transform: rotate(225deg);
+    transition: border-width 150ms ease-in-out;
+}
+
+.arrow-up:hover, .arrow-down:hover {
+    border-bottom-width: 6px;
+    border-right-width: 6px;
+}
+
+.banner {
+    padding-top: 0;
+}
+
+.banner img {
+    height: 70vh;
+    margin: auto;
+    display: block;
+}
+
+.basic-info-content {
+    height: 57vh;
+    overflow-y: auto;
+}
+
+.button {
+    text-decoration: none;
+    color: #FFFFFF !important;
+    font-weight: 100;
+    border: none;
+    background: #465D89;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: none;
+    color: #465D89 !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    -webkit-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
+}
+
+.button-container {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    width: 100%;
+    text-align: center;
+}
+
+.clearfix {
+    clear: left;
+}
+
+.column {
+    float: left;
+    max-width: 48%;
+    padding: 1%;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.experience, .degree {
+    border: 2px solid #465D89;
+    margin-bottom: 3px;
+}
+
+.experience:last-child, .degree:last-child {
+    margin-bottom: 0;
+}
+
+.error-message {
+    background-color: #ff000059;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.error-message ul {
+    list-style: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+.form {
+    margin-top: 70px;
+}
+
+.form h2 {
+    font-size: 4vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin: 0;
+}
+
+.full-width {
+    width: 94%;
+}
+
+.info::before {
+    content: "*";
+}
+
+.no-margin {
+    margin: 0;
+    width: 100%;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.template-img {
+    max-height: 50vh;
+    max-width: 100%;
+}
+
+.template-img:hover {
+    opacity: 0.5;
+}
+
+.templates {
+    display: inline-block;
+    list-style: none;
+    padding-inline-start: 0;
+    margin-bottom: 2vh;
+}
+
+.templates::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.templates input {
+    display: none;
+    position: absolute;
+}
+
+.templates input + label > img {
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.templates input:checked + label > img {
+    border: 2px solid #465D89;
+}
+
+#experience button, #education-info button {
+    padding: 6px 12px;
+}
+
+#experiences, #degrees {
+    overflow-y: auto;
+    height: 50vh;
+    margin: 5px;
+}
+
+#instructions {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
