@@ -8,7 +8,7 @@ class ResumeController extends Controller
 {
     public function index()
     {
-        view('resume.index');
+        return view('resume.index');
     }
 
     public function createResume()
@@ -18,6 +18,6 @@ class ResumeController extends Controller
 
     public function displayResume()
     {
-        view('resume.display');
+        return view('resume.display');
     }
 }
