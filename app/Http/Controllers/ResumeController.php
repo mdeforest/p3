@@ -8,7 +8,7 @@ class ResumeController extends Controller
 {
     public function index()
     {
-        return 'Show the form to enter Resume data';
+        view('resume.index');
     }
 
     public function createResume()
@@ -18,6 +18,6 @@ class ResumeController extends Controller
 
     public function displayResume()
     {
-        return 'display the resume that has been created';
+        view('resume.display');
     }
 }
