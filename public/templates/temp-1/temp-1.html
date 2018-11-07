@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        @import "https://www.super-resume.com/sr.css";
+
+        p.title, p.sub-title {
+            page-break-after: avoid;
+        }
+
+        p, li {
+            page-break-inside: avoid;
+        }
+
+        div.block-inner {
+            page-break-before: avoid;
+        }
+
+        div.papersheet-outer {
+            min-height: inherit !important;
+        }
+
+        [resume-viewer] {
+            font-size: 3.5mm;
+        }
+
+        [resume-viewer] div.papersheet-outer {
+            max-width: 210mm;
+            min-height: 297mm;
+        }
+
+        [resume-viewer] div.papersheet-inner {
+            padding-top: 15mm;
+            margin: auto;
+            width: 86%;
+            font-family: Raleway;
+        }
+
+        [resume-viewer] div.person,
+        [resume-viewer] p.title,
+        [resume-viewer] p.sub-title {
+            font-family: Roboto Condensed;
+        }
+
+        [resume-viewer] div.block,
+        [resume-viewer] div.child,
+        [resume-viewer] p.last-child {
+            margin-bottom: 1em !important;
+        }
+
+        /*fix the red/grey header not filling all the space in safari and firefox*/
+        .papersheet-inner > table.wide {
+            max-width: unset;
+        }
+
+        [resume-viewer] div.block p {
+            line-height: 1.4em;
+            margin: 0 0 .6em
+        }
+
+        [resume-viewer] div.block p.sub-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 0
+        }
+
+        [resume-viewer] div.block p.sub-where {
+            font-size: 1.1em;
+            margin: 0
+        }
+
+        [resume-viewer] div.block p.sub-dates {
+            font-size: 1em;
+            color: #555;
+            margin: 0 0 .5em
+        }
+
+        [resume-viewer] div.block p.person {
+            font-size: 4em;
+            margin-bottom: 0;
+            line-height: 1.2em;
+            margin-top: -.2em;
+        }
+
+        [resume-viewer] div.block p.jobtitle {
+            font-size: 1.2em;
+            margin: 0
+        }
+
+        [resume-viewer] div.block p.location {
+            font-size: 1em;
+            color: #555;
+            margin: 0
+        }
+
+        [resume-viewer] div.block span.company {
+            color: #555;
+            font-weight: bold
+        }
+
+        [resume-viewer] div.block p.title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 0 0 .5em 0;
+            padding: 0 .5em .1em;
+            text-transform: uppercase;
+            background: #ddd;
+            border: 1px solid #ddd;
+            -moz-border-radius: 0 0 1.3em 0;
+            -webkit-border-radius: 0 0 1.3em 0;
+            border-radius: 0 0 1.3em 0;
+            border-bottom-right-radius: 1.3em
+        }
+
+        [resume-viewer] div.blocks {
+            margin-top: 1em
+        }
+
+        [resume-viewer] div.block-inner {
+            margin-left: 2em
+        }
+
+        [resume-viewer] td.block-title {
+            width: 50%;
+            padding: 0;
+            border-top: .2em solid #ddd
+        }
+
+        [resume-viewer] table.wide {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+        [resume-viewer] table.wide.title {
+            page-break-inside: avoid;
+            page-break-after: avoid
+        }
+
+        [resume-viewer] td.left {
+            width: 65%;
+            vertical-align: top
+        }
+
+        [resume-viewer] td.right {
+            width: 35%;
+            vertical-align: top;
+            text-align: right
+        }
+    </style>
+</head>
+<body>
+<div resume-viewer>
+    <div class="papersheet-outer">
+        <div class="papersheet-inner">
+            <table class="wide">
+                <tr>
+                    <td class="left">
+                        <div class="block person" data-category="person">
+                            <p class="person"><span class="firstName">Your</span> <span class="lastName">Name</span></p>
+                            <p class="jobTitle">Profession</p>
+                            <p class="location"><span class='city'>City</span>, <span class='state'>State</span></p>
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="block contact" data-category="contact">
+                            <div class="html-content">
+                                <span class='email'>your.name@example.com</span><br/><span class='phoneNumber'>111-222-3333</span><br/><span
+                                    class='website'>www.your-website.com</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="blocks">
+                <div class="block" data-category="text" data-children="" data-id="1">
+
+                    <table class="wide title" cellspacing="0">
+                        <tr>
+                            <td class="block-title"><p class="title">Summary</p></td>
+                            <td class="block-title"></td>
+                        </tr>
+                    </table>
+                    <div class="block-inner">
+                        <div class="html-content summary">List here your top selling points, including your most relevant strengths, skills and core competencies.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="block" data-category="experience" data-children="2" data-id="2">
+                    <table class="wide title" cellspacing="0">
+                        <tr>
+                            <td class="block-title"><p class="title">Work Experience</p></td>
+                            <td class="block-title"></td>
+                        </tr>
+                    </table>
+                    <div class="block-inner">
+                        <div class="child" data-id="2c1" data-category="experience">
+                            <p class="sub-title jobTitle">Job Title</p>
+                            <p class="sub-where"><span class="company">Company Name</span>,
+                                <span class="location">Location</span></p>
+                            <p class="sub-dates"><span class="fromMonth">Jan</span>
+                                <span class="fromYear">2013</span> &ndash; <span class="toMonth">Dec</span>
+                                <span class="toYear">2013</span></p>
+                            <div class="html-content">Describe your job responsibilities, accomplishments and technologies you have used. It is highly recommended that you use bullet points to describe your experience.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="block" data-category="education" data-children="1" data-id="3">
+                    <table class="wide title" cellspacing="0">
+                        <tr>
+                            <td class="block-title"><p class="title">Education</p></td>
+                            <td class="block-title"></td>
+                        </tr>
+                    </table>
+                    <div class="block-inner">
+                        <div class="child" data-id="3c1" data-category="education">
+                            <p class="sub-title degree">Degree</p>
+                            <p class="sub-where"><span class="where">School Name</span>,
+                                <span class="location">Location</span></p>
+                            <p class="sub-dates"><span class="fromYear">2013</span> &ndash;
+                                <span class="toYear">2013</span>
+                            </p>
+                            <div class="html-content">(Optional) GPA, Awards, Honors</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="block" data-category="text" data-children="" data-id="4">
+
+                    <table class="wide title" cellspacing="0">
+                        <tr>
+                            <td class="block-title"><p class="title">Additional Information</p></td>
+                            <td class="block-title"></td>
+                        </tr>
+                    </table>
+                    <div class="block-inner">
+                        <div class="html-content additionalInfo">Include other relevant information that employers should know about. This may include activities, experiences and interests that you have that relate to the position you are trying to get.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
