@@ -125,9 +125,7 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
-        ],
+        'output.required' => 'Please choose a valid output',
     ],
 
     /*
@@ -141,6 +139,23 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'email' => 'email address',
+        'experience.jobTitle.*' => 'job title for each experience',
+        'experience.company.*' => 'company for each experience',
+        'experience.location.*' => 'location for each experience',
+        'experience.fromMonth.*' => 'start month for each experience',
+        'experience.fromYear.*' => 'start year for each experience',
+        'experience.toMonth.*' => 'end month for each experience',
+        'experience.toYear.*' => 'end year for each experience',
+        'experience.html-content.*' => 'summary for each experience',
+        'education.degree.*' => 'degree for each school attended',
+        'education.where.*' => 'name for each school attended',
+        'education.location.*' => 'location for each school attended',
+        'education.fromYear.*' => 'start year for each school attended',
+        'education.toYear.*' => 'end year for each school attended',
+        'education.html-content.*' => 'summary for each school attended'
+
+    ],
 
 ];
