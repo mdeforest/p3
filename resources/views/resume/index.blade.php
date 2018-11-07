@@ -181,17 +181,20 @@
                     <button type='button' class='button' onclick='addExperience()'>Add</button>
                 </div>
                 @if(count($errors->get('experience.*')) > 0)
+                @php ($used_errors = [])
                 <div class='error-message'>
                     <ul>
                         @foreach($errors->get('experience.*') as $error)
-                            <li>{{ $error[0] }}</li>
+                            @if (!in_array($error[0], $used_errors))
+                                <li>{{ $error[0] }}</li>
+                                @php ($used_errors[] = $error[0])
+                            @endif
                         @endforeach
                     </ul>
                 </div>
                 @endif
                 <div id='experiences'>
                     @if(old('experience'))
-                        {{ Debugbar::info(json_encode(old('experience'))) }}
                         @for($i = 0; $i < count(old('experience.jobTitle')); $i++)
                             <script>addExperience({!! json_encode(old('experience')) !!}, "{{ $i }}")</script>
                         @endfor
@@ -211,10 +214,14 @@
                     <button type='button' class='button' onclick='addEducation()'>Add</button>
                 </div>
                 @if (count($errors->get('education.*')) > 0)
+                @php ($used_errors = [])
                     <div class='error-message'>
                         <ul>
                             @foreach ($errors->get("education.*") as $error)
-                                <li>{{ $error[0] }}</li>
+                                @if (!in_array($error[0], $used_errors))
+                                    <li>{{ $error[0] }}</li>
+                                    @php ($used_errors[] = $error[0])
+                                @endif
                             @endforeach
                         </ul>
                     </div>
