@@ -3,16 +3,34 @@
 + Production URL: <http://p3.mdeforestdwa.me>
 
 ## Outside resources
-*Your list of outside resources go here*
+[CSS Design used for Buttons](https://www.magnet4blogging.net/button-styles/)
+
+[HTML for Resume Templates](https://www.super-resume.com/)
+
+[Tool for Testing XPath Queries](http://xpather.com/)
+
+[HTML to PDF converter for PHP](https://github.com/dompdf/dompdf)
+
+[Logo for Project](https://hatchful.shopify.com/)
+
+[Google Font for Paragraph Text](https://fonts.google.com/specimen/Raleway?selection.family=Raleway)
+
+[Google Font for Heading Text](https://fonts.google.com/specimen/Slabo+27px?selection.family=Slabo+27px)
+
+[CSS for Arrow Buttons](https://codepen.io/pjwiebe/pen/VmmxpM)
+
+[CSS for Forms](https://www.w3schools.com/css/css_form.asp)
 
 ## 3 Unique inputs
-*You don't have to list all inputs, just 3 unique ones. The following is an example of what I'd put if my project was the xkcd Password Generator: (1) Text input to indicate number of words in password, (2) Checkbox to indicate whether to include a number (3) Dropdown to indicate what symbol to include*
+(1) Text input to specify information such as First Name, (2) Radio to indicate what resume template to use (3) Dropdown to indicate the Day, Month, and Year of a particular event
 
 ## Packages
-*List the name of any packages you add to your project that do not come with Laravel by default; this should include, but is not limited to, barryvdh/laravel-debugbar*
+barryvdh/laravel-debugbar
+barryvdh/laravel-ide-helper
+dompdf/dompdf
 
 ## Code style divergences
-*list any divergences from PSR-1/PSR-2 and course guidelines on code style*
+None that I can think of
 
 ## Notes for instructor
-*Any notes for me to refer to while grading; if none, omit this section*
+I used the same design as before, but altered it to hopefully work better by making it less complicated
