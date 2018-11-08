@@ -109,7 +109,6 @@ class ResumeController extends Controller
             'additionalInfo' => $additionalInfo
         ]);
 
-
         // Redirect to done page where resume will be displayed
         return redirect('resume');
     }
@@ -124,7 +123,6 @@ class ResumeController extends Controller
         // Necessary to make experience or education an empty list instead of unset
         $experience = $request->session()->get('experience', []);
         $education = $request->session()->get('education', []);
-
 
         $results = $request->session()->get('results');
         $output = $request->session()->get('output');

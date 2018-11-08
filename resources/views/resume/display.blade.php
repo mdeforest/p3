@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('title')
-Your Resume
+    Your Resume
 @endsection
 
 @section('content')
-{!! $resume !!}
+    {!! $resume !!}
 @endsection
