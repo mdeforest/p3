@@ -1,16 +1,17 @@
 @extends('layouts.master')
 
+@push('head')
+    <link rel="stylesheet" href="/css/master.css">
+    <script src='js/show-hide.js'></script>
+@endpush
+
 @section('content')
 <div class='container'>
     <section class='banner' id='intro'>
         <h1><img src='images/logo.png' alt='Resume Creator Logo'></h1>
         <p id='instructions'>Create a Resume by choosing a template and filling out the required fields below</p>
-        <div class='button-container'>
-            <a class='button' href='#choose-template'>Let's Go!</a>
-        </div>
     </section>
     <form class='form' method='POST' action='create-resume'>
-        {{ Debugbar::info($errors) }}
         {{ csrf_field() }}
         @if(count($errors) > 0)
             <section id='choose-template' class='no-padding'>
@@ -18,16 +19,13 @@
         @else
             <section id='choose-template'>
         @endif
-                <a href='#intro'>
-                    <div class='arrow-up'></div>
-                </a>
                 <h2>Choose a Template</h2>
                 <div class='templates'>
                     <div class='column'>
                         <input type='radio'
                                name='template'
                                id='temp-1'
-                               value='temp-1' {{ $errors->get('template') && $errors->get('template') == 'temp-1' ? 'checked' : '' }} >
+                               value='temp-1' {{ old('template') == 'temp-1' ? 'checked' : '' }} >
                         <label for='temp-1'>
                             <img class="template-img" src='templates/temp-1/temp-1.png' alt='Template 1'>
                         </label>
@@ -36,20 +34,15 @@
                         <input type='radio'
                                name='template'
                                id='temp-2'
-                               value='temp-2' {{ $errors->get('template') && $errors->get('template') == 'temp-2' ? 'checked' : '' }} >
+                               value='temp-2' {{ old('template') == 'temp-2' ? 'checked' : '' }} >
                         <label for='temp-2'>
                             <img class="template-img" src='templates/temp-2/temp-2.png' alt='Template 2'>
                         </label>
                     </div>
                 </div>
-                <a href='#basic-info'>
-                    <div class='arrow-down'></div>
-                </a>
             </section>
+            <hr>
             <section id='basic-info'>
-                <a href='#choose-template'>
-                    <div class='arrow-up'></div>
-                </a>
                 <h2>Basic Information</h2>
                 <div class='basic-info-content'>
                     <fieldset>
@@ -154,28 +147,16 @@
                     </fieldset>
                     <div class='clearfix'></div>
                 </div>
-                <a href='#summary'>
-                    <div class='arrow-down'></div>
-                </a>
             </section>
-
+            <hr>
             <section id='summary'>
-                <a href='#basic-info'>
-                    <div class='arrow-up'></div>
-                </a>
                 <h2>Summary</h2>
                 <textarea placeholder='List here your top selling points, including your most relevant strengths, skills and core competencies'
                           name='summary'>{{ old('summary') }}</textarea>
                 <span class='error'>{{ $errors->first('summary') }}</span>
-                <a href='#experience'>
-                    <div class='arrow-down'></div>
-                </a>
             </section>
-
+            <hr>
             <section id='experience' class='work-experience'>
-                <a href='#summary'>
-                    <div class='arrow-up'></div>
-                </a>
                 <h2>Work Experience</h2>
                 <div class='button-container'>
                     <button type='button' class='button' onclick='addExperience()'>Add</button>
@@ -200,15 +181,9 @@
                         @endfor
                     @endif
                 </div>
-                <a href='#education-info'>
-                    <div class='arrow-down'></div>
-                </a>
             </section>
-
+            <hr>
             <section id='education-info' class='education'>
-                <a href='#experience'>
-                    <div class='arrow-up'></div>
-                </a>
                 <h2>Education</h2>
                 <div class='button-container'>
                     <button type='button' class='button' onclick='addEducation()'>Add</button>
@@ -233,28 +208,16 @@
                         @endfor
                     @endif
                 </div>
-                <a href='#additional-info'>
-                    <div class='arrow-down'></div>
-                </a>
             </section>
-
+            <hr>
             <section id='additional-info'>
-                <a href='#education-info'>
-                    <div class='arrow-up'></div>
-                </a>
                 <h2>Additional Information</h2>
                 <textarea placeholder='Include other relevant information that employers should know about. This may include activities, experiences and interests that you have that relate to the position you are trying to get'
                           id='additionalInfo' name='additionalInfo'>{{ old('additionalInfo') }}</textarea>
                 <span class='error'>{{ $errors->first('additionalInfo') }}</span>
-                <a href='#output'>
-                    <div class='arrow-down'></div>
-                </a>
             </section>
-
+            <hr>
             <section id='output'>
-                <a href='#additional-info'>
-                    <div class='arrow-up'></div>
-                </a>
                 <h2>Choose Display Type</h2>
                 <select name='output'>
                     <option value='html' selected>HTML</option>

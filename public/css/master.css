@@ -6,14 +6,18 @@ fieldset {
     float: left;
 }
 
-p {
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
+hr {
+    width: 90%;
+    margin-bottom: 30px;
 }
 
 html {
     scroll-behavior: smooth;
-    overflow-y: hidden;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
 
 input[type=text], select {
@@ -39,8 +43,7 @@ label {
 }
 
 section {
-    height: 99vh;
-    padding-top: 5vh;
+    height: 100vh;
     text-align: center;
 }
 
@@ -74,35 +77,6 @@ textarea {
     height: 59vh;
 }
 
-.arrow-down {
-    box-sizing: border-box;
-    height: 6vw;
-    width: 6vw;
-    margin: 0 auto;
-    border-style: solid;
-    border-color: #465D89;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-    transition: border-width 150ms ease-in-out;
-}
-
-.arrow-up {
-    box-sizing: border-box;
-    height: 6vw;
-    width: 6vw;
-    margin: 0 auto;
-    border-style: solid;
-    border-color: #465D89;
-    border-width: 0 3px 3px 0;
-    transform: rotate(225deg);
-    transition: border-width 150ms ease-in-out;
-}
-
-.arrow-up:hover, .arrow-down:hover {
-    border-bottom-width: 6px;
-    border-right-width: 6px;
-}
-
 .banner {
     padding-top: 0;
 }
@@ -114,7 +88,7 @@ textarea {
 }
 
 .basic-info-content {
-    height: 57vh;
+    height: auto;
     overflow-y: auto;
 }
 
@@ -177,6 +151,8 @@ textarea {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 25px;
+    overflow-y: auto;
+    height: 45px;
 }
 
 .error-message ul {
@@ -190,7 +166,6 @@ textarea {
 
 .form h2 {
     font-size: 4vh;
-    padding-top: 2vh;
     padding-bottom: 2vh;
     margin: 0;
 }
@@ -213,7 +188,7 @@ textarea {
 }
 
 .template-img {
-    max-height: 50vh;
+    max-height: 100vh;
     max-width: 100%;
 }
 
@@ -254,7 +229,7 @@ textarea {
 
 #experiences, #degrees {
     overflow-y: auto;
-    height: 50vh;
+    height: calc(75vh - 45px);
     margin: 5px;
 }
 
