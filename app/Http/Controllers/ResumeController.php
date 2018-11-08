@@ -16,9 +16,9 @@ class ResumeController extends Controller
     {
         $request->validate([
             'template' => 'required',
-            'firstName' => 'required|alpha',
-            'lastName' => 'required|alpha',
-            'jobTitle' => 'required|alpha_num',
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'jobTitle' => 'required',
             'city' => 'required',
             'state' => 'required',
             'email' => 'nullable|email',
@@ -27,7 +27,7 @@ class ResumeController extends Controller
             'summary' => 'required',
             'additionalInfo' => 'required',
             'output' => 'required',
-            'experience.jobTitle.*' => 'sometimes|required|alpha_num',
+            'experience.jobTitle.*' => 'sometimes|required',
             'experience.company.*' => 'sometimes|required',
             'experience.location.*' => 'sometimes|required',
             'experience.fromMonth.*' => 'sometimes|required',
@@ -35,7 +35,7 @@ class ResumeController extends Controller
             'experience.toMonth.*' => 'sometimes|required',
             'experience.toYear.*' => 'sometimes|required',
             'experience.html-content.*' => 'required',
-            'education.degree.*' => 'sometimes|required|alpha',
+            'education.degree.*' => 'sometimes|required',
             'education.where.*' => 'sometimes|required',
             'education.location.*' => 'sometimes|required',
             'education.fromYear.*' => 'sometimes|required',
@@ -213,6 +213,6 @@ class ResumeController extends Controller
             exit();
         }
 
-        return view('resume.display');
+        return view('resume.display')->with('resume', $htmlString);
     }
 }
