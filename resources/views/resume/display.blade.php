@@ -5,5 +5,5 @@ Your Resume
 @endsection
 
 @section('content')
-{!! $htmlString !!}
+{!! $resume !!}
 @endsection
