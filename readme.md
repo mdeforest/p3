@@ -21,6 +21,11 @@
 
 [CSS for Forms](https://www.w3schools.com/css/css_form.asp)
 
+[Laravel Documentation](https://laravel.com/docs/5.7)
+
+[StackOverflow (I mean who doesn't?)](https://stackoverflow.com/)
+
+
 ## 3 Unique inputs
 (1) Text input to specify information such as First Name, (2) Radio to indicate what resume template to use (3) Dropdown to indicate the Day, Month, and Year of a particular event
 
